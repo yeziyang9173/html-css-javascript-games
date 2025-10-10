@@ -16,9 +16,9 @@ let highScore = localStorage.getItem("high-score") || 0;
 highScoreElement.innerText = `High Score: ${highScore}`;
 
 const updateFoodPosition = () => {
-    // Passing a random 1 - 30 value as food position
-    foodX = Math.floor(Math.random() * 30) + 1;
-    foodY = Math.floor(Math.random() * 30) + 1;
+    // Passing a random 1 - 20 value as food position
+    foodX = Math.floor(Math.random() * 20) + 1;
+    foodY = Math.floor(Math.random() * 20) + 1;
 }
 
 const handleGameOver = () => {
@@ -73,7 +73,7 @@ const initGame = () => {
     snakeBody[0] = [snakeX, snakeY]; // Setting first element of snake body to current snake position
 
     // Checking if the snake's head is out of wall, if so setting gameOver to true
-    if(snakeX <= 0 || snakeX > 30 || snakeY <= 0 || snakeY > 30) {
+    if(snakeX <= 0 || snakeX > 20 || snakeY <= 0 || snakeY > 20) {
         return gameOver = true;
     }
 
