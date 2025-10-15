@@ -30,18 +30,18 @@ addEventListener("load", (event) => {
 });
 
 // Define ball properties
-var ballRadius = 10;
+var ballRadius = 20; // 从10增加到15
 var ballX = canvas.width / 2;
 var ballY = canvas.height / 2;
-var ballSpeedX = 5;
-var ballSpeedY = 5;
+var ballSpeedX = 5; // 从5增加到7
+var ballSpeedY = 5; // 从5增加到7
 
 // Define paddle properties
-var paddleHeight = 80;
-var paddleWidth = 10;
+var paddleHeight = 120; // 从80增加到120
+var paddleWidth = 15; // 从10增加到15
 var leftPaddleY = canvas.height / 2 - paddleHeight / 2;
 var rightPaddleY = canvas.height / 2 - paddleHeight / 2;
-var paddleSpeed = 10;
+var paddleSpeed = 10; // 从10增加到15
 
 // Define score properties
 var leftPlayerScore = 0;
@@ -171,7 +171,7 @@ function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   ctx.fillStyle = "#FFF";
-  ctx.font = "15px Arial";
+  ctx.font = "22px Arial"; // 从15px增加到22px
 
   ctx.beginPath();
   ctx.moveTo(canvas.width / 2, 0);
@@ -198,8 +198,8 @@ function draw() {
   );
 
   // Draw scores
-  ctx.fillText("Score: " + leftPlayerScore, 10, 20);
-  ctx.fillText("Score: " + rightPlayerScore, canvas.width - 70, 20);
+  ctx.fillText("Score: " + leftPlayerScore, 15, 30); // 从10,20调整到15,30
+  ctx.fillText("Score: " + rightPlayerScore, canvas.width - 105, 30); // 从canvas.width - 70, 20调整到canvas.width - 105, 30
 }
 
 // Game loop
